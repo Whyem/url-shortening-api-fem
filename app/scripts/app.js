@@ -16,6 +16,17 @@ $(document).ready(function(){
 
 $(document).on("click", ".copy_btn", function () {
     var clicked = $(this);
+
+    //Code to copy the link------------------------------------------------------------------
+    
+    var copyText = clicked.prev().text();
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(copyText).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    //---------------------------------------------------------------------------------------
     
     $(".copy_btn").each(function(){
         if($(this).is(clicked)){
@@ -50,14 +61,8 @@ $(document).on("click", ".shorten", function () {
         if (long_link.match(regex)) {
             
             if(!urls.includes(long_link)){
-                var newLink = $(".toclone").last().clone();
-            
-                newLink.children(".violet").text(long_link);
-                newLink.children().children(".rel").text("https://rel.ink/" + randomString(6));
-
-                $(".generated_links").append(newLink);
-                newLink.addClass("fade-in");
-                
+                shorten(long_link);
+                               
                 $("#long_link").removeClass("error");
                 $("small").removeClass("error");
 
@@ -80,4 +85,20 @@ function randomString(length) {
     var result = '';
     for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
     return result;
+}
+
+function shorten(url){
+    $.ajax({
+        type: "POST",
+        url: "https://api.shrtco.de/v2/shorten?url="+url,
+        success: function (data, status, xhr) {// success callback function
+            var newLink = $(".toclone").last().clone();
+            
+            newLink.children(".violet").text(url);
+            newLink.children().children(".rel").text(data.result.short_link);
+
+            $(".generated_links").append(newLink);
+            newLink.addClass("fade-in");
+        } 
+      });
 }
