@@ -1,0 +1,15 @@
+$breakpoint: 376px;
+
+@mixin breakpoint-up() {
+    @media(min-width: $breakpoint){
+        @content;
+    }
+    
+}
+
+@mixin breakpoint-down() {
+    @media(max-width: $breakpoint){
+        @content;
+    }
+    
+}

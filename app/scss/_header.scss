@@ -1,0 +1,100 @@
+.header{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint-down(){
+        padding-top: 2.75rem;
+        padding-bottom: 2.75rem;
+    }
+}
+
+
+nav :is(a){
+    font-weight: 700;
+    font-size: .83rem;
+    color: $grayishViolet;
+    transition: all 400ms ease-in-out;
+
+    &:hover{
+        color: $veryDarkViolet;
+    }
+}
+
+.hamburger :is(span){
+    width: 24px;
+    height: 4px;
+    background-color: $grayishViolet;
+    display: block;
+
+    &:not(:last-child){
+        margin-bottom: 5px;
+    }
+}
+
+.logo{
+    margin-right: 2.5rem;
+}
+
+.links :is(a){
+    &:not(:last-child){
+        margin-right: 1.66rem;
+    }
+}
+
+.btn{
+    
+    color: white;
+    border-radius: 50px;
+    background-color: $cyan;
+    transition: all 400ms ease-in-out;
+
+    &__sign{
+        padding: 0.66rem 1.33rem;
+        margin-left: 2rem;
+    }
+
+    &__started{
+        padding: 1rem 2.22rem;
+    }
+
+    &:hover{
+        background-color: #9BE2E2;
+        color: white;
+    }
+    
+}
+
+.mobile_links{
+    background-color: $darkViolet;
+    padding: 2.5rem 1.5rem;
+    display: block;
+    text-align: center;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+
+    :is(a){
+        color: white;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.top_links{
+    border-bottom: 1px solid $grayishViolet;
+    
+    :is(a){
+        margin-bottom: 2.75rem;
+    }
+}
+
+.bottom_links{
+    :is(a){
+        margin-top: 2.75rem;
+    }
+}

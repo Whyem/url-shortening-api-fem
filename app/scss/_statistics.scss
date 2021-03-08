@@ -1,0 +1,122 @@
+.statistics{
+    padding-top: 8rem;
+    padding-bottom: 7.5rem;
+    background-color: $lightGray;
+    text-align: center;
+
+    @include breakpoint-down(){
+        padding-top: 4.88rem;
+        padding-bottom: 4rem;
+    }
+
+    :is(h2){
+        color: $darkViolet;
+        font-size: 2.16rem;
+        margin-bottom: 1.66rem;
+    }
+
+    &__p{
+        margin: 0 auto;
+        line-height: 1.8;
+        margin-bottom: 5.625rem;
+
+        @include breakpoint-up(){
+            width: 45ch;
+        }
+
+    }
+
+}
+
+.stats{
+    position: relative;
+    padding-top: 44px;
+
+    @include breakpoint-down(){
+        padding-top: 0;
+    }
+
+    &:before{
+        content: "";
+        width: 100%;
+        height: 7px;
+        background-color: $cyan;
+        position: absolute;
+        top: 50%;
+
+        @include breakpoint-down(){
+            width: 7px;
+            height: 100%;
+            top: 0;
+            padding-top: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.stat{
+    background: white;
+    border-radius: 5px;
+    padding: 2.1875rem;
+    padding-top: 0;
+    text-align: left;
+    position: relative;
+    
+    @include breakpoint-down(){
+        text-align: center;
+        padding-top: 1px;
+        margin: 0;
+        
+        &:not(:last-child){
+            margin-bottom: 90px;
+        }
+
+    }
+
+    &:first-child{
+        margin-bottom: 90px;
+    }
+
+    &:nth-child(2){
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    
+    &:last-child{
+        margin-top: 90px;
+    }
+
+    &__img{
+        width: 4.88rem;
+        height: 4.88rem;
+        background: $darkViolet;
+        border-radius: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+
+        @include breakpoint-down(){
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+
+    &__title{
+        color: $darkViolet;
+        margin-top: 4rem;
+        font-size: 1.375rem;
+
+        @include breakpoint-down(){
+            //margin-top: 4.875rem;
+        }
+    }
+
+    &__desc{
+        line-height: 1.6;
+        font-size: .9375rem;
+
+        @include breakpoint-up(){
+            width: 30ch;
+        }
+    }
+}

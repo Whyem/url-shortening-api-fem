@@ -1,0 +1,150 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+
+    @include breakpoint-down(){
+        font-size: 14px;
+    }
+}
+
+*:focus{
+    outline: none;
+}
+
+:root{
+    font-weight: 18px;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.1;
+    font-family: 'Poppins', sans-serif;
+    color: $gray;
+    min-height: 100vh;
+    position: relative;
+
+
+    @include breakpoint-down(){
+        
+    }
+}
+
+img{
+    display: block;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+h1, h2 , h4, p, small, ul{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 4.33rem;
+    color: $darkViolet;
+    margin-bottom: 1rem;
+
+    @include breakpoint-down(){
+        font-size: 2.33rem;
+    }
+
+    @include breakpoint-up(){
+        width: 17ch;
+    }
+}
+
+h2{
+    
+    @include breakpoint-down(){
+        
+    }
+}
+
+h3{
+    
+}
+
+p{
+    
+}
+
+.flex{
+    display: flex;
+
+    &--row{
+        flex-direction: row;
+    }
+
+    &--jc{
+        justify-content: center;
+    }
+
+    &--jcfs{
+        justify-content: flex-start;
+    }
+
+    &--jcfe{
+        justify-content: flex-end;
+    }
+
+    &--jsb{
+        justify-content: space-between;
+    }
+
+    &--ai{
+        align-items: center;
+    }
+
+    &--as{
+        align-items: flex-start;
+    }
+}
+
+//a helper class fd-bm == Flex for Desktop and Block for Mobile------
+.fd-bm{
+    display: flex;
+
+    @include breakpoint-down(){
+        display: block;
+    }
+}
+
+.container{
+    padding-left: 10.25rem;
+    padding-right: 10.25rem;
+
+    @include breakpoint-down(){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.noscroll{
+    overflow: hidden;
+}
+
+
+//Visibility
+.hide-for-mobile{
+    @include breakpoint-down{
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up{
+        display: none;
+    }
+}

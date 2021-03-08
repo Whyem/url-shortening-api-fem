@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="dist/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+</head>
+<body>
+
+  <header class="header container">
+    <nav class = "flex flex--jsb flex--ai">
+      <div class="left flex flex--ai">
+        <a href="#">
+          <img src="./images/logo.svg" class="logo" alt="shortly">
+        </a>
+        <div class="links hide-for-mobile">
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </div>
+      </div>
+
+      <div class="hamburger hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="right hide-for-mobile">
+        <a href="#">Login</a>
+        <a href="#" class=" btn btn__sign">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile_links container hide-for-desktop">
+    <div class="top_links">
+      <a href="#" class="formobile">Features</a>
+      <a href="#" class="formobile">Pricing</a>
+      <a href="#" class="formobile">Resources</a>
+    </div>
+    
+    <div class="bottom_links">
+      <a href="#" class="formobile" >Login</a>
+        <a href="#" class=" btn btn__sign formobile">Sign Up</a>
+    </div>
+    
+  </div>
+
+
+  <section class="intro container">
+    <div class="fd-bm flex--ai flex--row">
+      <div class="intro__img">
+        <img src="/images/illustration-working.svg" alt="working">
+      </div>
+
+      <div class="intro__text">
+        <h1>More than just shorter links</h1>
+        <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+        <a href="#" class=" btn btn__started">Get Started</a>
+      </div>
+    </div> 
+  </section>
+
+  <section class="shortner container">
+      <div class="shortner__block fd-bm">
+        <div class="group">
+          <input type="text" id="long_link" value="" placeholder="Shorten a link here...">
+          <small>Please add a link</small>
+        </div>
+        <button class="shorten">Shorten it!</button>
+      </div>
+  </section>
+
+  <section class="generated_links container" >
+    
+
+  </section>
+
+  <section class="statistics container">
+    <h2>Advanced Statistics</h2>
+    <p class="statistics__p">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+    <div class="stats fd-bm flex--jsb">
+      <div class="stat">
+        <div class="stat__img flex flex--jc flex--ai">
+          <img src="/images/icon-brand-recognition.svg" alt="brand-recognition">
+        </div>
+
+        <h3 class="stat__title">Brand Recognition</h3>
+        <p class="stat__desc">Boost your brand recognition with each click. Generic links don’t 
+          mean a thing. Branded links help instil confidence in your content.</p>
+
+      </div>
+
+      <div class="stat">
+        <div class="stat__img flex flex--jc flex--ai">
+          <img src="/images/icon-detailed-records.svg" alt="brand-recognition">
+        </div>
+
+        <h3 class="stat__title">Detailed Records</h3>
+        <p class="stat__desc">Gain insights into who is clicking your links. Knowing when and where 
+          people engage with your content helps inform better decisions.</p>
+
+      </div>
+
+      <div class="stat">
+        <div class="stat__img flex flex--jc flex--ai">
+          <img src="/images/icon-fully-customizable.svg" alt="brand-recognition">
+        </div>
+
+        <h3 class="stat__title">Fully Customizable</h3>
+        <p class="stat__desc">Improve brand awareness and content discoverability through customizable 
+          links, supercharging audience engagement.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="boost container">
+    <h2>Boost your links today</h2>
+    <a href="#" class=" btn btn__started">Get Started</a>
+  </section>
+
+  <footer class="container">
+    <div class="linkz fd-bm flex--as flex--jsb">
+      <a href="#">
+        <img src="./images/logo_white.svg" class="logo_white" alt="shortly">
+      </a>
+
+      <div class="footer_links">
+        <h4>Features</h4>
+        <a href="#">Link Shortening</a>
+        <a href="#">Branded Links</a>
+        <a href="#">Analytics</a>
+      </div>
+      
+      <div class="footer_links">
+        <h4>Resources</h4>
+        <a href="#">Blog</a>
+        <a href="#">Developers</a>
+        <a href="#">Support</a>
+      </div>
+      
+      <div class="footer_links">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Our Team</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <div class="social__links flex flex--jc flex--ai">
+        <a href="#"><i class="fab fa-facebook-square"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+       </div>
+
+    </div>  
+  </footer>
+
+  <!-- This is the shortened link container that will be cloned anytime we shorten a new link -->
+  <div class="clonable" style="display:none;">
+
+    <div class="shortened_link toclone fd-bm flex--jsb flex--ai">
+      <p class="violet">https://www.frontendmentor.io</p>
+
+      <div class="fd-bm flex--jc flex--ai">
+        <p class="rel">https://rel.ink/3re220Q</p>
+        <button class="copy_btn">Copy</button>
+      </div>
+    </div>
+
+  </div>
+  <!-------------------------------------------------------------------------------------------->
+
+  <script src="./app/scripts/app.js"></script>
+</body>
+
+</html>

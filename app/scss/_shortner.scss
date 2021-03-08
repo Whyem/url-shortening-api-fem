@@ -1,0 +1,173 @@
+.generated_links{
+    background-color: $lightGray;
+    padding-top: 6.75rem;
+
+    @include breakpoint-down(){
+        padding-top: 6.88rem;
+    }
+}
+
+.shortner{
+    position:relative;
+}
+
+
+.shortner__block{
+    background-color: $darkViolet;
+    border-radius: 8px;
+    padding: 3.25rem 4rem;
+    justify-content: space-around;
+    align-items: baseline;
+    background-image: url('/images/bg-shorten-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10.25rem;
+    right: 10.25rem;
+    transform: translateY(-50%);
+
+    @include breakpoint-down(){
+        padding: 1.16rem;
+        left: 1.44rem;
+        right: 1.44rem;
+        background-image: url('/images/bg-shorten-mobile.svg');
+    }
+
+    :is(input){
+        width: 100%;
+        border-radius: 11px;
+        border:none;
+        padding: 1.3125rem 2.5rem;
+        font-family: inherit;
+
+        ::placeholder{
+            color: $grayishViolet;
+        }
+
+    }
+
+    :is(small){
+        color: $red;
+        font-style: italic;
+        display: none;
+
+        &.error{
+            display: block;
+        }
+    }
+
+}
+
+.shorten{
+    background-color: $cyan;
+    color: white;
+    font-weight: 700;
+    padding: 1.3125rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1.25rem;
+    transition: all 600ms ease-in-out;
+
+    @include breakpoint-down(){
+        width: 100%;
+        padding-top: .875rem;
+        padding-bottom: .875rem;
+    }
+
+    &:hover{
+        background-color: #9BE2E2;
+    }
+}
+
+.group{
+    width: 48.125rem;
+    margin-right: 1.375rem;
+
+    @include breakpoint-down(){
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2.11rem;
+    }
+}
+
+input.error{
+    border: 3px solid $red !important;
+    margin-bottom: 5px;
+
+    &::placeholder{
+                color: #F7B4BB !important;
+            } 
+}
+
+.shortened_link{
+    background-color: white;
+    border-radius: 8px;
+    transition: all 600ms ease-in-out;
+    
+    @include breakpoint-up(){
+        padding: 1rem 1.5rem;
+    }
+    
+    :is(.violet){
+        color: $darkViolet;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @include breakpoint-down(){
+            border-bottom: 1px $gray solid;
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    :is(div){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @include breakpoint-down(){
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    &:not(:first-child){
+        margin-top: 1rem;
+    }
+}
+
+.copy_btn{
+    border-radius: 7px;
+    border: none;
+    color: white;
+    background-color: $cyan;
+    padding: 0.75rem 1.3125rem;
+    font-family: inherit;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    transition: all 400ms ease-in-out;
+
+    @include breakpoint-down(){
+        width: 100%;
+        margin: 0;
+    }
+
+    &:hover{
+        background-color: #9BE2E2;
+    }
+}
+
+.copied{
+    background-color: $darkViolet;
+
+    &:hover{
+        background-color: $darkViolet;
+    }
+}
+
+.rel{
+    color: $cyan !important;
+
+    @include breakpoint-down(){
+        margin-bottom: .88rem;
+    }
+}
+

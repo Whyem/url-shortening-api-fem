@@ -1,0 +1,66 @@
+footer{
+    background-color: $veryDarkViolet;
+    padding-top: 4.125rem;
+    padding-bottom: 4.125rem;
+
+
+    :is(a){
+        display: block;
+        transition:all 400ms ease-in-out;
+
+        &:hover{
+            color: $cyan;
+        }
+    }
+
+    :is(h4){
+        margin-bottom: 1.625rem;
+        color: white;
+    }
+
+    @include breakpoint-down(){
+        text-align: center;
+    }
+}
+
+
+i{
+    color: white;
+    font-size: 26px;
+    transition:all 400ms ease-in-out;
+
+    &:hover{
+        color: $cyan;
+    }
+}
+
+.social__links{
+
+    :is(a){
+        &:not(:last-child){
+            margin-right: 1.375rem;
+        }
+    }
+}
+
+.logo_white{
+    margin: 0 auto;
+    @include breakpoint-down(){
+        margin-bottom: 3rem;
+    }
+}
+
+.footer_links{
+    :is(a){
+        color: $gray;
+
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        @include breakpoint-down(){
+            margin-bottom: 3rem;
+        }
+    }    
+
+}

@@ -1,0 +1,49 @@
+.intro{
+    padding-top: 5.66rem;
+    padding-bottom: 8.38rem;
+    overflow-x: hidden;
+
+    @include breakpoint-down(){
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 9.44rem;
+    }
+
+    &__text{
+        order: 1;
+
+        :is(p){
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2.11rem;
+    
+            @include breakpoint-up(){
+                width: 42ch;
+                font-size: 1.16rem;
+            }
+
+            @include breakpoint-down(){
+                width: 30ch;
+                margin: 0 auto;
+                margin-bottom: 2.11rem;
+            }
+
+
+        }
+    }
+
+    &__img{
+        order: 2;
+
+        @include breakpoint-down(){
+            margin-bottom: 2.33rem;
+
+            :is(img){
+                width: 510px;
+            }
+        }
+    }
+    
+
+
+}
